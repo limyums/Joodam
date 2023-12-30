@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from 'lucide-react';
+import { AlignJustify, Facebook, Instagram } from 'lucide-react';
 import Link from 'next/link';
 import './Header.scss';
 import Image from 'next/image';
@@ -54,6 +54,10 @@ export default function Header() {
           <ReserveButton />
         </li>
       </ul>
+      <div className="mobile">
+        <ReserveButton />
+      </div>
+      <AlignJustify className="mobile" size={45} />
     </header>
   );
 }

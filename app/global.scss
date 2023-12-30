@@ -12,7 +12,9 @@ body {
   color: black;
   overflow-x: hidden;
 }
-
+main {
+  margin-top: 100px;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -64,9 +66,7 @@ li {
     text-underline-offset: 1rem;
   }
 }
-main {
-  margin-top: 100px;
-}
+
 .food {
   padding: 1rem 10rem 1rem 10rem;
   .title-price {
@@ -75,6 +75,11 @@ main {
     font-size: 1.2rem;
     font-weight: 700;
     align-items: center;
+    justify-content: space-between;
+    .title {
+      display: flex;
+      gap: 0.5rem;
+    }
   }
   .spicy {
     display: flex;
@@ -178,6 +183,9 @@ main {
 
 .location {
   text-align: center;
+  .locationgoogle:hover {
+    cursor: pointer;
+  }
   &-info {
     padding: 2rem 0rem 2rem 0rem;
     font-size: 1.3rem;
@@ -186,6 +194,201 @@ main {
       font-weight: bold;
       font-size: 1.4rem;
       line-height: 3rem;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html,
+  body {
+    max-width: 100vw;
+    min-width: 725px;
+  }
+  .btn-reserve {
+    font-size: 1rem;
+  }
+
+  main {
+    margin-top: 100px;
+  }
+
+  .home {
+    &-wrap {
+      padding: 0 2rem 0 2rem;
+    }
+    &-item {
+      font-size: 3.5rem;
+    }
+  }
+
+  .food {
+    padding: 1rem 3rem 1rem 3rem;
+    &-item {
+      padding-top: 100px;
+      &-title {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      &-wrap {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        .foodmenuimage {
+          margin: auto;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .menu {
+    font-size: 5rem;
+  }
+
+  .gallery {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .location {
+    padding-top: 5%;
+    text-align: center;
+    .locationimg {
+      width: 250px;
+      height: auto;
+    }
+    .locationgoogle {
+      width: 400px;
+      height: auto;
+    }
+    &-info {
+      font-size: 1rem;
+      .title {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html,
+  body {
+    max-width: 100vw;
+    min-width: 320px;
+  }
+
+  .btn-reserve {
+    font-size: 1rem;
+  }
+
+  main {
+    margin-top: 70px;
+  }
+  .home {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/joodam_mobile.jpg');
+    background-size: cover;
+    &-wrap {
+      padding: 1rem;
+      flex-direction: column;
+      padding-top: 20vh;
+    }
+    &-item {
+      width: 100%;
+      font-size: 4rem;
+    }
+  }
+
+  .food {
+    padding: 1rem 1rem 1rem 1rem;
+    &-item {
+      padding-top: 70px;
+      &-title {
+        flex-direction: column;
+      }
+      &-wrap {
+        padding-top: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        .foodmenuimage {
+          width: 290px;
+          height: 290px;
+          margin: auto;
+          display: block;
+        }
+      }
+      &-menuitems {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 1rem;
+        &-detail {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .menu {
+    flex-direction: column;
+    font-size: 5rem;
+    &-food {
+      height: 50vh;
+      div {
+        padding-top: 20%;
+      }
+    }
+    &-drink {
+      height: 50vh;
+      div {
+        padding-top: 20%;
+      }
+    }
+  }
+
+  .gallery {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .location {
+    padding-top: 10%;
+    text-align: center;
+    .locationimg {
+      width: 200px;
+      height: auto;
+    }
+    .locationgoogle {
+      width: 300px;
+      height: auto;
+    }
+    &-info {
+      font-size: 1rem;
+      .title {
+        font-size: 1.2rem;
+      }
     }
   }
 }

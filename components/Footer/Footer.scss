@@ -19,3 +19,36 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .footer {
+    padding: 2rem 2rem 2rem 2rem;
+    font-size: 14px;
+    img {
+      width: 150px;
+      height: auto;
+    }
+    &_item {
+      &_title {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 1rem 3rem 1rem;
+    font-size: 14px;
+    &_item {
+      line-height: 2rem;
+      &_title {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}

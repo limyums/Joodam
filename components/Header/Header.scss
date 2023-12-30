@@ -20,4 +20,37 @@
       font-weight: bold;
     }
   }
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    padding: 1rem 2rem 1rem 2rem;
+    font-size: 18px;
+    img {
+      width: 150px;
+      height: 70px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 14px;
+    align-items: center;
+    &_links {
+      display: none;
+    }
+    img {
+      width: 100px;
+      height: 50px;
+    }
+  }
+  .mobile {
+    display: block !important;
+    align-items: center;
+  }
 }
