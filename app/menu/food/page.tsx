@@ -1,6 +1,6 @@
 'use client';
 import { gsap } from 'gsap';
-import { useEffect, useRef } from 'react';
+import { useEffect as UseEffect, useRef as UseRef } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Anju, Appetizer, Hotpot, Meal, Dessert } from '@/app/menuscript';
 import Image from 'next/image';
@@ -8,13 +8,13 @@ import Image from 'next/image';
 const BASE_CLASS = 'food';
 export default function page() {
   gsap.registerPlugin(ScrollTrigger);
-  const appetizerRef = useRef(null);
-  const anjuRef = useRef(null);
-  const hotpotRef = useRef(null);
-  const mealRef = useRef(null);
-  const desserRef = useRef(null);
+  const appetizerRef = UseRef(null);
+  const anjuRef = UseRef(null);
+  const hotpotRef = UseRef(null);
+  const mealRef = UseRef(null);
+  const desserRef = UseRef(null);
 
-  useEffect(() => {
+  UseEffect(() => {
     gsap.fromTo(
       '#appetizer',
       {
