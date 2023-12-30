@@ -1,6 +1,6 @@
 'use client';
 import { gsap } from 'gsap';
-import { useEffect, useRef } from 'react';
+import { useEffect as UseEffect, useRef as UseRef } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Facebook, Instagram } from 'lucide-react';
 import './Footer.scss';
@@ -11,9 +11,9 @@ const BASE_CLASS = 'footer';
 
 export default function Footer() {
   gsap.registerPlugin(ScrollTrigger);
-  const itemRef = useRef(null);
+  const itemRef = UseRef(null);
 
-  useEffect(() => {
+  UseEffect(() => {
     gsap.fromTo(
       '.footer',
       {
