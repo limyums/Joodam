@@ -39,7 +39,7 @@ export default function Page() {
         scrollTrigger: {
           trigger: '#anju',
           start: '0% 50%', //시작 지점
-          end: '100% 80%', //끝 지점
+          end: '100% 50%', //끝 지점
         },
       }
     );
@@ -53,8 +53,8 @@ export default function Page() {
         duration: 1.5,
         scrollTrigger: {
           trigger: '#hotpot',
-          start: '0% 40%', //시작 지점
-          end: '100% 80%', //끝 지점
+          start: '0% 50%', //시작 지점
+          end: '100% 50%', //끝 지점
         },
       }
     );
@@ -68,8 +68,8 @@ export default function Page() {
         duration: 1.5,
         scrollTrigger: {
           trigger: '#meal',
-          start: '0% 40%', //시작 지점
-          end: '100% 80%', //끝 지점
+          start: '0% 50%', //시작 지점
+          end: '100% 50%', //끝 지점
         },
       }
     );
@@ -83,8 +83,8 @@ export default function Page() {
         duration: 1.5,
         scrollTrigger: {
           trigger: '#dessert',
-          start: '0% 40%', //시작 지점
-          end: '100% 80%', //끝 지점
+          start: '0% 50%', //시작 지점
+          end: '100% 50%', //끝 지점
         },
       }
     );
