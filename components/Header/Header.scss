@@ -1,0 +1,23 @@
+.header {
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem 1rem 4rem;
+  font-size: 18px;
+  &_links {
+    display: flex;
+    align-items: center;
+    li {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+    li:hover {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 6rem 2rem 6rem;
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  align-items: center;
+  &_item {
+    line-height: 2rem;
+
+    &_title {
+      font-size: 2rem;
+      padding-bottom: 1rem;
+    }
+    &_icons {
+      padding-left: 1rem;
+    }
+  }
+}

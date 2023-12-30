@@ -1,0 +1,22 @@
+.foodheader {
+  justify-content: space-between;
+  font-size: 18px;
+  background-color: rgb(42, 42, 42);
+  color: white;
+  position: fixed;
+  top: 120px;
+  width: 100%;
+  &_links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 1rem 0;
+    li {
+      list-style-type: none;
+      padding-left: 2rem;
+    }
+    li:hover {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
