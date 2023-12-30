@@ -1,3 +1,4 @@
+'use client';
 import { Anju, Appetizer, Hotpot, Meal, Dessert } from '@/app/menuscript';
 import Image from 'next/image';
 
@@ -59,7 +60,10 @@ export default function page() {
             />
             <div className={`${BASE_CLASS}-item-menuitems`}>
               {Appetizer.map((item) => (
-                <div className={`${BASE_CLASS}-item-menuitems-detail`}>
+                <div
+                  key={`appetizer-${item.id}`}
+                  className={`${BASE_CLASS}-item-menuitems-detail`}
+                >
                   <div className="title-price">
                     <div>{item.title}</div>
                     <div>${item.price}</div>
@@ -102,7 +106,10 @@ export default function page() {
             <div className={`${BASE_CLASS}-item-menuitems`}>
               {Anju.map((item) => (
                 <>
-                  <div className={`${BASE_CLASS}-item-menuitems-detail`}>
+                  <div
+                    key={`anju-${item.id}`}
+                    className={`${BASE_CLASS}-item-menuitems-detail`}
+                  >
                     <div className="title-price">
                       <div>{item.title}</div>
                       <div>${item.price}</div>
@@ -149,7 +156,10 @@ export default function page() {
             <div className={`${BASE_CLASS}-item-menuitems`}>
               {Hotpot.map((item) => (
                 <>
-                  <div className={`${BASE_CLASS}-item-menuitems-detail`}>
+                  <div
+                    key={`hotpot-${item.id}`}
+                    className={`${BASE_CLASS}-item-menuitems-detail`}
+                  >
                     <div className="title-price">
                       <div>{item.title}</div>
                       {item.option ? (
@@ -207,7 +217,10 @@ export default function page() {
             <div className={`${BASE_CLASS}-item-menuitems`}>
               {Meal.map((item) => (
                 <>
-                  <div className={`${BASE_CLASS}-item-menuitems-detail`}>
+                  <div
+                    key={`meal-${item.id}`}
+                    className={`${BASE_CLASS}-item-menuitems-detail`}
+                  >
                     <div className="title-price">
                       <div>{item.title}</div>
                       {item.option ? (
@@ -264,7 +277,10 @@ export default function page() {
             />
             <div className={`${BASE_CLASS}-item-menuitems`}>
               {Dessert.map((item) => (
-                <div className={`${BASE_CLASS}-item-menuitems-detail`}>
+                <div
+                  key={`dessert-${item.id}`}
+                  className={`${BASE_CLASS}-item-menuitems-detail`}
+                >
                   <div className="title-price">
                     <div>{item.title}</div>
                     <div>${item.price}</div>
