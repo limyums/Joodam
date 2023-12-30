@@ -1,6 +1,6 @@
 'use client';
 import { gsap } from 'gsap';
-import { useEffect as UseEffect, useRef as UseRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Anju, Appetizer, Hotpot, Meal, Dessert } from '@/app/menuscript';
 import Image from 'next/image';
@@ -8,13 +8,13 @@ import Image from 'next/image';
 const BASE_CLASS = 'food';
 export default function Page() {
   gsap.registerPlugin(ScrollTrigger);
-  const appetizerRef = UseRef(null);
-  const anjuRef = UseRef(null);
-  const hotpotRef = UseRef(null);
-  const mealRef = UseRef(null);
-  const desserRef = UseRef(null);
+  const appetizerRef = useRef(null);
+  const anjuRef = useRef(null);
+  const hotpotRef = useRef(null);
+  const mealRef = useRef(null);
+  const desserRef = useRef(null);
 
-  UseEffect(() => {
+  useEffect(() => {
     gsap.fromTo(
       '#appetizer',
       {
@@ -38,8 +38,7 @@ export default function Page() {
         duration: 1.5,
         scrollTrigger: {
           trigger: '#anju',
-          start: '0% 50%', //시작 지점
-          end: '100% 50%', //끝 지점
+          start: '0% 60%', //시작 지점
         },
       }
     );
@@ -53,8 +52,7 @@ export default function Page() {
         duration: 1.5,
         scrollTrigger: {
           trigger: '#hotpot',
-          start: '0% 50%', //시작 지점
-          end: '100% 50%', //끝 지점
+          start: '0% 70%', //시작 지점
         },
       }
     );
@@ -68,8 +66,7 @@ export default function Page() {
         duration: 1.5,
         scrollTrigger: {
           trigger: '#meal',
-          start: '0% 50%', //시작 지점
-          end: '100% 50%', //끝 지점
+          start: '0% 70%', //시작 지점
         },
       }
     );
@@ -83,8 +80,7 @@ export default function Page() {
         duration: 1.5,
         scrollTrigger: {
           trigger: '#dessert',
-          start: '0% 50%', //시작 지점
-          end: '100% 50%', //끝 지점
+          start: '0% 70%', //시작 지점
         },
       }
     );
