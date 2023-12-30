@@ -6,7 +6,7 @@ import { Anju, Appetizer, Hotpot, Meal, Dessert } from '@/app/menuscript';
 import Image from 'next/image';
 
 const BASE_CLASS = 'food';
-export default function page() {
+export default function Page() {
   gsap.registerPlugin(ScrollTrigger);
   const appetizerRef = UseRef(null);
   const anjuRef = UseRef(null);
