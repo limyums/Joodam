@@ -1,3 +1,7 @@
+'use client';
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Facebook, Instagram } from 'lucide-react';
 import './Footer.scss';
 import ReserveButton from '../ReserveButton';
@@ -6,9 +10,27 @@ import Image from 'next/image';
 const BASE_CLASS = 'footer';
 
 export default function Footer() {
+  gsap.registerPlugin(ScrollTrigger);
+  const itemRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      '.footer',
+      {
+        opacity: 0.3,
+      },
+      {
+        opacity: 1,
+        duration: 3,
+        scrollTrigger: {
+          trigger: '.footer',
+        },
+      }
+    );
+  });
   return (
     <>
-      <footer className={BASE_CLASS}>
+      <footer ref={itemRef} className={BASE_CLASS}>
         <div className={`${BASE_CLASS}_item`}>
           <div className={`${BASE_CLASS}_item_title`}>CONTACT</div>
           <div>1003 9 Ave SE, Calgary, AB</div>

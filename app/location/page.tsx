@@ -10,6 +10,7 @@ export default function Location() {
           alt="gallery"
           width={600}
           height={700}
+          className="locationimg"
         />
         <div className={`${BASE_CLASS}-info`}>
           <div className="title">CALL US </div>
@@ -18,12 +19,15 @@ export default function Location() {
           <div>joodamcalgary@gmail.com</div>
           <div className="title">1003 9 Ave SE, Calgary, AB</div>
         </div>
-        <Image
-          src="/assets/googlemap.png"
-          alt="gallery"
-          width={800}
-          height={550}
-        />
+        <a target="_blank" href="https://maps.app.goo.gl/DwFbEL5JFRL2zzCX9">
+          <Image
+            src="/assets/googlemap.png"
+            alt="gallery"
+            width={800}
+            height={550}
+            className="locationgoogle"
+          />
+        </a>
       </div>
     </>
   );

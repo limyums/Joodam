@@ -20,3 +20,25 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .foodheader {
+    font-size: 16px;
+    top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .foodheader {
+    font-size: 14px;
+    color: white;
+    top: 70px;
+    &_links {
+      padding: 1rem 0 1rem 0;
+      li {
+        list-style-type: none;
+        padding-left: 0.7rem;
+      }
+    }
+  }
+}
