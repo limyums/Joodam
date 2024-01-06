@@ -31,7 +31,7 @@ import { Drink } from '@/types/menu';
 
 const BASE_CLASS = 'drink';
 
-export default function page() {
+export default function Page() {
   const drinkmenuRef = useRef(null);
 
   useEffect(() => {
