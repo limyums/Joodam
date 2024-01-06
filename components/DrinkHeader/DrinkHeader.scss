@@ -1,0 +1,46 @@
+.drinkheader {
+  justify-content: space-between;
+  font-size: 18px;
+  background-color: rgb(42, 42, 42);
+  color: white;
+  position: fixed;
+  top: 120px;
+  width: 100%;
+  &_links {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0 1rem 0;
+    li {
+      list-style-type: none;
+      padding-left: 2rem;
+    }
+    li:hover {
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .drinkheader {
+    font-size: 16px;
+    top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .drinkheader {
+    font-size: 14px;
+    color: white;
+    top: 70px;
+    &_links {
+      padding: 1rem 0 1rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        list-style-type: none;
+        padding-left: 0.7rem;
+      }
+    }
+  }
+}
