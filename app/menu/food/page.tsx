@@ -6,17 +6,13 @@ import { Anju, Appetizer, Hotpot, Meal, Dessert } from '@/app/menuscript';
 import Image from 'next/image';
 
 const BASE_CLASS = 'food';
-export default function page() {
+export default function Page() {
   gsap.registerPlugin(ScrollTrigger);
-  const appetizerRef = useRef(null);
-  const anjuRef = useRef(null);
-  const hotpotRef = useRef(null);
-  const mealRef = useRef(null);
-  const desserRef = useRef(null);
+  const foodmenuRef = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
-      '#appetizer',
+      '.food',
       {
         opacity: 0.3,
       },
@@ -25,66 +21,6 @@ export default function page() {
         duration: 1,
         scrollTrigger: {
           trigger: '#appetizer',
-        },
-      }
-    );
-    gsap.fromTo(
-      '#anju',
-      {
-        opacity: 0.3,
-      },
-      {
-        opacity: 1,
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: '#anju',
-          start: '0% 50%', //시작 지점
-          end: '100% 80%', //끝 지점
-        },
-      }
-    );
-    gsap.fromTo(
-      '#hotpot',
-      {
-        opacity: 0.3,
-      },
-      {
-        opacity: 1,
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: '#hotpot',
-          start: '0% 40%', //시작 지점
-          end: '100% 80%', //끝 지점
-        },
-      }
-    );
-    gsap.fromTo(
-      '#meal',
-      {
-        opacity: 0.3,
-      },
-      {
-        opacity: 1,
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: '#meal',
-          start: '0% 40%', //시작 지점
-          end: '100% 80%', //끝 지점
-        },
-      }
-    );
-    gsap.fromTo(
-      '#dessert',
-      {
-        opacity: 0.3,
-      },
-      {
-        opacity: 1,
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: '#dessert',
-          start: '0% 40%', //시작 지점
-          end: '100% 80%', //끝 지점
         },
       }
     );
@@ -130,8 +66,8 @@ export default function page() {
   };
   return (
     <>
-      <div className={BASE_CLASS}>
-        <div ref={appetizerRef} id="appetizer" className={`${BASE_CLASS}-item`}>
+      <div ref={foodmenuRef} className={BASE_CLASS}>
+        <div id="appetizer" className={`${BASE_CLASS}-item`}>
           <div className={`${BASE_CLASS}-item-title`}>
             <Image src="/assets/line.png" alt="line" width={300} height={20} />
             <div>Appetizer</div>
@@ -187,7 +123,7 @@ export default function page() {
           </div>
         </div>
 
-        <div ref={anjuRef} id="anju" className={`${BASE_CLASS}-item`}>
+        <div id="anju" className={`${BASE_CLASS}-item`}>
           <div className={`${BASE_CLASS}-item-title`}>
             <Image src="/assets/line.png" alt="line" width={300} height={20} />
             <div>Anju</div>
@@ -247,7 +183,7 @@ export default function page() {
             />
           </div>
         </div>
-        <div ref={hotpotRef} id="hotpot" className={`${BASE_CLASS}-item`}>
+        <div id="hotpot" className={`${BASE_CLASS}-item`}>
           <div className={`${BASE_CLASS}-item-title`}>
             <Image src="/assets/line.png" alt="line" width={300} height={20} />
             <div>Hotpot</div>
@@ -313,7 +249,7 @@ export default function page() {
             />
           </div>
         </div>
-        <div ref={mealRef} id="meal" className={`${BASE_CLASS}-item`}>
+        <div id="meal" className={`${BASE_CLASS}-item`}>
           <div className={`${BASE_CLASS}-item-title`}>
             <Image src="/assets/line.png" alt="line" width={300} height={20} />
             <div>Meal</div>
@@ -372,7 +308,7 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div ref={desserRef} id="dessert" className={`${BASE_CLASS}-item`}>
+        <div id="dessert" className={`${BASE_CLASS}-item`}>
           <div className={`${BASE_CLASS}-item-title`}>
             <Image src="/assets/line.png" alt="line" width={300} height={20} />
             <div>Dessert</div>

@@ -15,6 +15,8 @@ export interface Drink {
   id: number;
   title: string;
   description: string;
+  virgin: boolean;
   volume: string | string[];
   price: number | number[];
+  option: boolean;
 }
