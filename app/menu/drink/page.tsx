@@ -1,3 +1,4 @@
+'use client';
 import {
   BubblyWine,
   Cocktail,
@@ -24,9 +25,7 @@ import {
   WhiteWine,
 } from '@/app/drinkscript';
 import Image from 'next/image';
-
 import { Drink } from '@/types/menu';
-import { render } from 'react-dom';
 
 const BASE_CLASS = 'drink';
 
