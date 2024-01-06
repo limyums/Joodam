@@ -1,4 +1,6 @@
 'use client';
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
 import {
   BubblyWine,
   Cocktail,
@@ -30,6 +32,24 @@ import { Drink } from '@/types/menu';
 const BASE_CLASS = 'drink';
 
 export default function page() {
+  const drinkmenuRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      '.drink',
+      {
+        opacity: 0.3,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.drink',
+        },
+      }
+    );
+  });
+
   const renderPrice = (item: Drink) => {
     const render = [];
     if (item.option) {
@@ -61,7 +81,7 @@ export default function page() {
     return render;
   };
   return (
-    <div className={BASE_CLASS}>
+    <div ref={drinkmenuRef} className={BASE_CLASS}>
       <div id="cocktails" className={`${BASE_CLASS}-item`}>
         <div className={`${BASE_CLASS}-item-title`}>
           <Image src="/assets/line.png" alt="line" width={300} height={20} />
@@ -243,7 +263,7 @@ export default function page() {
               {DraftBeer.map((item) => (
                 <div
                   key={`draftbeer-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail option`}
+                  className={`${BASE_CLASS}-item-menuitems-detail`}
                 >
                   <div className="title-price">
                     <div className="title">
@@ -325,7 +345,7 @@ export default function page() {
               {OriginalSoju.map((item) => (
                 <div
                   key={`OriginalSoju-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail soju`}
+                  className={`${BASE_CLASS}-item-menuitems-detail wide`}
                 >
                   <div className="title-price">
                     <div className="title">
@@ -341,7 +361,7 @@ export default function page() {
               {FlavouredSoju.map((item) => (
                 <div
                   key={`FlavouredSoju-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail soju`}
+                  className={`${BASE_CLASS}-item-menuitems-detail wide`}
                 >
                   <div className="title-price">
                     <div className="title">
@@ -357,7 +377,7 @@ export default function page() {
               {CocktailSoju.map((item) => (
                 <div
                   key={`CocktailSoju-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail soju`}
+                  className={`${BASE_CLASS}-item-menuitems-detail wide`}
                 >
                   <div className="title-price">
                     <div className="title">
@@ -373,7 +393,7 @@ export default function page() {
               {Makgeolli.map((item) => (
                 <div
                   key={`Makgeolli-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail soju`}
+                  className={`${BASE_CLASS}-item-menuitems-detail wide`}
                 >
                   <div className="title-price">
                     <div className="title">
@@ -389,7 +409,8 @@ export default function page() {
               {PremiumSoju.map((item) => (
                 <div
                   key={`PremiumSoju-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail option`}
+                  className={`${BASE_CLASS}-item-menuitems-detail
+                  `}
                 >
                   <div className="title-price">
                     <div className="title">
@@ -446,7 +467,7 @@ export default function page() {
               {RedWine.map((item) => (
                 <div
                   key={`RedWine-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail option`}
+                  className={`${BASE_CLASS}-item-menuitems-detail wide`}
                 >
                   <div className="title-price wine">
                     <div className="title">
@@ -462,7 +483,7 @@ export default function page() {
               {WhiteWine.map((item) => (
                 <div
                   key={`WhiteWine-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail option`}
+                  className={`${BASE_CLASS}-item-menuitems-detail wide`}
                 >
                   <div className="title-price wine">
                     <div className="title">
@@ -478,7 +499,7 @@ export default function page() {
               {RoseWine.map((item) => (
                 <div
                   key={`RoseWine-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail option`}
+                  className={`${BASE_CLASS}-item-menuitems-detail wide`}
                 >
                   <div className="title-price wine">
                     <div className="title">
@@ -494,7 +515,7 @@ export default function page() {
               {BubblyWine.map((item) => (
                 <div
                   key={`BubblyWine-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail option`}
+                  className={`${BASE_CLASS}-item-menuitems-detail wide`}
                 >
                   <div className="title-price wine">
                     <div className="title">
@@ -520,7 +541,7 @@ export default function page() {
               {Sake.map((item) => (
                 <div
                   key={`Sake-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail option`}
+                  className={`${BASE_CLASS}-item-menuitems-detail`}
                 >
                   <div className="title-price wine">
                     <div className="title">
@@ -546,7 +567,7 @@ export default function page() {
               {NonAlcoholic.map((item) => (
                 <div
                   key={`NonAlcoholic-${item.id}`}
-                  className={`${BASE_CLASS}-item-menuitems-detail soju`}
+                  className={`${BASE_CLASS}-item-menuitems-detail wide`}
                 >
                   <div className="title-price">
                     <div className="title">

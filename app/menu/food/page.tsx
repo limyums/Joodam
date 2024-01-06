@@ -1,13 +1,11 @@
 'use client';
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Anju, Appetizer, Hotpot, Meal, Dessert } from '@/app/menuscript';
 import Image from 'next/image';
 
 const BASE_CLASS = 'food';
 export default function Page() {
-  gsap.registerPlugin(ScrollTrigger);
   const foodmenuRef = useRef(null);
 
   useEffect(() => {
@@ -20,7 +18,7 @@ export default function Page() {
         opacity: 1,
         duration: 1,
         scrollTrigger: {
-          trigger: '#appetizer',
+          trigger: '.food',
         },
       }
     );
