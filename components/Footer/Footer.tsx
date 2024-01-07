@@ -17,11 +17,11 @@ export default function Footer() {
     gsap.fromTo(
       '.footer',
       {
-        opacity: 0.3,
+        opacity: 0.5,
       },
       {
         opacity: 1,
-        duration: 3,
+        duration: 2,
         scrollTrigger: {
           trigger: '.footer',
         },
